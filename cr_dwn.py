@@ -13,9 +13,9 @@ course_link = 'https://www.coursera.org/learn/ml-foundations'
 # ENTER start and end week
 start_week = 1
 end_week = 6
-# ENTER valid directory for storing vids weekwise. Make sure you don't need sudo
-store_dir = '/home/YOUR_USERNAME/Desktop'
-#Enter implicit wait time parameter. Lesser foren faster internet. If the script crashes because of 'could not find on page' or something, increase this
+# ENTER valid directory (SAME FORMAT BELOW) for storing vids weekwise. Make sure you don't need sudo
+store_dir = '/home/***YOUR_USERNAME***/Desktop'
+#Change only if you have slow internet. Enter explicit wait time parameter. Lesser for faster internet. If the script crashes because of 'could not find on page' or something, increase this
 wait_time = 5
 
 ### That's about it. Now run this script and if it doesn't have fun debugging it. Buhbye
@@ -79,3 +79,6 @@ for wi in range (start_week, end_week + 1):
 		print '\n\n'
 		driver.get(course_link+'/home/week/'+str(wi))
 		time.sleep(wait_time * 1.8)
+
+print 'DONE!'
+driver.quit()
