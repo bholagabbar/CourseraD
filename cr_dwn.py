@@ -71,10 +71,10 @@ for wi in range (start_week, end_week + 1):
 				'''To avoid downloading and just checking if the script works (print topics weekwise and heading wise)
 				Comment the 4 lines below'''
 				#From here
-				# driver.get(to_link)
-				# time.sleep(wait_time * 2)
-				# vid_link = driver.find_element_by_css_selector('.rc-LectureDownloadItem > a:nth-child(1)').get_attribute('href')
-				# urllib.urlretrieve(vid_link, newpath + "/" + topic+".mp4")
+				driver.get(to_link)
+				time.sleep(wait_time * 2)
+				vid_link = driver.find_element_by_css_selector('.rc-LectureDownloadItem > a:nth-child(1)').get_attribute('href')
+				urllib.urlretrieve(vid_link, newpath + "/" + topic+".mp4")
 				#Till here
 		print '\n\n'
 		driver.get(course_link+'/home/week/'+str(wi))
